@@ -1,0 +1,593 @@
+
+/* ========================================
+   DIVERTUR COLOMBIA
+   Hoja de estilos principal
+======================================== */
+
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* 2. BARRA DE NAVEGACIÓN */
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #ffffff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Menú */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #f28c28;
+}
+
+
+/* 3. SECCIÓN PRINCIPAL HERO */
+
+.hero {
+    min-height: 620px;
+    min-height: 80vh;
+
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.52),
+            rgba(0, 0, 0, 0.58)
+        ),
+        url("../img/metrocable.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 32px;
+
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.8;
+}
+
+
+/* 4. BOTONES */
+
+.btn {
+    display: inline-block;
+    padding: 14px 26px;
+
+    background-color: #f28c28;
+    color: #ffffff;
+
+    border: 2px solid #f28c28;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #222222;
+
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus-visible,
+.navbar nav a:focus-visible {
+    outline: 3px solid #0057b8;
+    outline-offset: 4px;
+}
+
+
+/* 5. SECCIÓN DE TOURS */
+
+.tours {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.tours > h2 {
+    margin-bottom: 15px;
+
+    color: #0057b8;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+}
+
+.tours > p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* 6. TARJETAS DE TOURS */
+
+.tour-card {
+    width: 100%;
+    max-width: 1050px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    text-align: left;
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Imágenes de los tours */
+
+.tour-image {
+    min-width: 0;
+    min-height: 420px;
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.tour-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.04);
+}
+
+
+/* Información de los tours */
+
+.tour-content {
+    min-width: 0;
+    padding: 38px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tour-content h3 {
+    margin-bottom: 15px;
+
+    color: #0057b8;
+    font-size: clamp(24px, 2.5vw, 31px);
+    line-height: 1.3;
+}
+
+.tour-content > p:not(.tour-price):not(.meeting-point) {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* Precios */
+
+.tour-price {
+    margin-bottom: 18px;
+
+    color: #e77a16;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+
+/* Lista de beneficios */
+
+.tour-content ul {
+    width: 100%;
+    margin: 22px 0;
+    padding-left: 22px;
+
+    color: #444444;
+}
+
+.tour-content li {
+    margin-bottom: 11px;
+    padding-left: 3px;
+    line-height: 1.6;
+}
+
+
+/* Punto de encuentro */
+
+.meeting-point {
+    margin-top: auto;
+    margin-bottom: 22px;
+
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+
+/* Botón de reserva */
+
+.tour-content .btn {
+    margin-top: 5px;
+}
+
+
+/* 7. SECCIÓN NOSOTROS */
+
+#nosotros {
+    background-color: #f4f7fb;
+}
+
+#nosotros > p {
+    max-width: 800px;
+}
+
+
+/* 8. SECCIÓN DE CONTACTO */
+
+.contact-section {
+    padding: 85px 20px;
+    background-color: #eef4fb;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+
+    color: #0057b8;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.3;
+}
+
+.contact-content > p {
+    margin-bottom: 28px;
+
+    color: #444444;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-content .btn {
+    margin-bottom: 8px;
+}
+
+.contact-content .contact-phone {
+    margin: 15px 0 0;
+
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* 9. PIE DE PÁGINA */
+
+footer {
+    padding: 28px 20px;
+
+    background-color: #111111;
+    color: #ffffff;
+
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* 10. DISEÑO PARA TABLETAS */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .tours {
+        padding: 70px 5%;
+    }
+
+    .tour-content {
+        padding: 28px;
+    }
+
+    .tour-image,
+    .tour-image img {
+        min-height: 360px;
+    }
+}
+
+
+/* 11. DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    .navbar {
+        min-height: auto;
+        padding: 14px 18px;
+
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        gap: 12px 20px;
+        justify-content: center;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 70px 22px;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        margin-bottom: 28px;
+        line-height: 1.7;
+    }
+
+    .tours {
+        padding: 60px 20px;
+    }
+
+    .tours > p {
+        font-size: 16px;
+    }
+
+    .tour-card {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 32px;
+        border-radius: 14px;
+    }
+
+    .tour-image {
+        min-height: 0;
+        height: 280px;
+    }
+
+    .tour-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        max-height: none;
+    }
+
+    .tour-content {
+        padding: 26px 23px;
+    }
+
+    .tour-content h3 {
+        font-size: 26px;
+    }
+
+    .tour-price {
+        font-size: 22px;
+    }
+
+    .meeting-point {
+        margin-top: 0;
+    }
+
+    .tour-content .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .contact-section {
+        padding: 60px 22px;
+    }
+
+    .contact-content > p {
+        font-size: 16px;
+    }
+}
+
+
+/* 12. CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .navbar nav {
+        gap: 10px 14px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .tour-content {
+        padding: 23px 18px;
+    }
+
+    .tour-content h3 {
+        font-size: 23px;
+    }
+
+    .tour-price {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+}
+
+
+/* 13. ACCESIBILIDAD: REDUCIR ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
