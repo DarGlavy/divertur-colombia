@@ -22,12 +22,15 @@
             <img src="img/logo-divertur.png" alt="Logo Divertur Colombia">
         </div>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#tours">Tours</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+       
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#tours">Tours</a>
+    <a href="#reservas">Reservar</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
 
     </header>
 
@@ -168,6 +171,70 @@
 
         </section>
 
+
+<section id="reservas" class="reservation-section">
+    <h2>Reserva tu experiencia</h2>
+    <p>
+        Completa los datos para solicitar tu reserva.
+        Confirmaremos la disponibilidad antes del pago.
+    </p>
+
+    <form id="reservation-form">
+        <label for="tour">Selecciona tu tour</label>
+        <select id="tour" name="tour" required>
+            <option value="60000">Tour Comuna 13 - $60.000 por persona</option>
+            <option value="120000">Tour Comuna 13 + Centro Histórico - $120.000 por persona</option>
+        </select>
+
+        <label for="fecha">Fecha deseada</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="personas">Número de personas</label>
+        <input
+            type="number"
+            id="personas"
+            name="personas"
+            min="1"
+            value="2"
+            required
+        >
+
+        <label for="nombre">Nombre del responsable</label>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre completo"
+            required
+        >
+
+        <label for="telefono">Número de celular</label>
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Tu número de contacto"
+            required
+        >
+
+        <label for="correo">Correo electrónico (opcional)</label>
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="tucorreo@ejemplo.com"
+        >
+
+        <div class="reservation-summary">
+            <h3>Resumen de tu reserva</h3>
+            <p>Total del tour: <strong id="total">$120.000 COP</strong></p>
+            <p>Anticipo del 30 %: <strong id="anticipo">$36.000 COP</strong></p>
+            <p>Saldo para el día del tour: <strong id="saldo">$84.000 COP</strong></p>
+        </div>
+
+        <button type="submit">Solicitar reserva por WhatsApp</button>
+    </form>
+</section>
 
         <!-- SECCIÓN NOSOTROS -->
         <section id="nosotros" class="tours">

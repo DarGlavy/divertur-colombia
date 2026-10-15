@@ -591,3 +591,114 @@ footer p {
     }
 
 }
+
+/* ===== SECCIÓN DE RESERVAS ===== */
+
+.reservation-section {
+    padding: 70px 20px;
+    background-color: #f4f8fb;
+    text-align: center;
+}
+
+.reservation-section h2 {
+    font-size: 2.2rem;
+    color: #123b5d;
+    margin-bottom: 15px;
+}
+
+.reservation-section > p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#reservation-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+#reservation-form label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #123b5d;
+    font-weight: 600;
+}
+
+#reservation-form input,
+#reservation-form select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d3dce5;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#reservation-form input:focus,
+#reservation-form select:focus {
+    outline: 2px solid #168aad;
+    border-color: #168aad;
+}
+
+.reservation-summary {
+    margin-top: 28px;
+    padding: 20px;
+    background-color: #edf7fa;
+    border-radius: 10px;
+}
+
+.reservation-summary h3 {
+    color: #123b5d;
+    margin-top: 0;
+}
+
+.reservation-summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #333;
+    flex-wrap: wrap;
+}
+
+.reservation-summary strong {
+    color: #087e8b;
+}
+
+#reservation-form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #087e8b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reservation-form button:hover {
+    background-color: #05616b;
+}
+
+@media (max-width: 600px) {
+    .reservation-section {
+        padding: 45px 15px;
+    }
+
+    .reservation-section h2 {
+        font-size: 1.8rem;
+    }
+
+    #reservation-form {
+        padding: 20px;
+    }
+}
